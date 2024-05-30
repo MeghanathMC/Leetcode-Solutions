@@ -7,15 +7,15 @@ class Solution {
             if(nums[i]==1){
                 count++;
             }
-            if(count>maxcount){
+            else {
+                if(count>maxcount){
                 maxcount=count;
             }
-
-            if(nums[i]==0){
-                count=0;
+            count=0;
             }
+
         }
-        return maxcount;
+        return count>maxcount?count:maxcount;
         
     }
 }
